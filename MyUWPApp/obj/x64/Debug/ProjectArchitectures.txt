@@ -1,0 +1,2 @@
+C:\Users\Nithin\source\repos\MyUWPApp\MyUWPApp.csproj;x64
+C:\Users\Nithin\source\repos\UWPClassLibrary\UWPClassLibrary.csproj;x64

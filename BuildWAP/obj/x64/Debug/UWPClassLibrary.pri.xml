@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<PriInfo>
+	<ResourceMap name="UWPClassLibrary" version="1.0" primary="true">
+		<Qualifiers/>
+		<ResourceMapSubtree name="Files">
+			<ResourceMapSubtree name="UWPClassLibrary">
+				<NamedResource name="MyUserControl.xbf" uri="ms-resource://UWPClassLibrary/Files/UWPClassLibrary/MyUserControl.xbf">
+					<Candidate type="Path">
+						<Value>UWPClassLibrary\MyUserControl.xbf</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="UWPClassLibrary.xr.xml" uri="ms-resource://UWPClassLibrary/Files/UWPClassLibrary/UWPClassLibrary.xr.xml">
+					<Candidate type="Path">
+						<Value>UWPClassLibrary\UWPClassLibrary.xr.xml</Value>
+					</Candidate>
+				</NamedResource>
+			</ResourceMapSubtree>
+		</ResourceMapSubtree>
+	</ResourceMap>
+</PriInfo>
