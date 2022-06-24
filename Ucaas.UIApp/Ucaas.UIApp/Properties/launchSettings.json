@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "Ucaas.UIApp (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "Ucaas.UIApp (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}

@@ -1,0 +1,133 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows10.0.19041.0</TargetFramework>
+    <TargetPlatformMinVersion>10.0.17763.0</TargetPlatformMinVersion>
+    <RootNamespace>Ucaas.UIApp</RootNamespace>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <Platforms>x86;x64;arm64</Platforms>
+    <RuntimeIdentifiers>win10-x86;win10-x64;win10-arm64</RuntimeIdentifiers>
+    <PublishProfile>win10-$(Platform).pubxml</PublishProfile>
+    <UseWinUI>true</UseWinUI>
+    <EnablePreviewMsixTooling>true</EnablePreviewMsixTooling>
+    <GenerateAppInstallerFile>False</GenerateAppInstallerFile>
+    <AppxPackageSigningEnabled>True</AppxPackageSigningEnabled>
+    <PackageCertificateThumbprint>B22C0889B12ECDEC566A33EF348D40F700FC4A44</PackageCertificateThumbprint>
+    <AppxPackageSigningTimestampDigestAlgorithm>SHA256</AppxPackageSigningTimestampDigestAlgorithm>
+    <AppxAutoIncrementPackageRevision>True</AppxAutoIncrementPackageRevision>
+    <AppxSymbolPackageEnabled>False</AppxSymbolPackageEnabled>
+    <GenerateTestArtifacts>True</GenerateTestArtifacts>
+    <AppxBundle>Never</AppxBundle>
+    <HoursBetweenUpdateChecks>0</HoursBetweenUpdateChecks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Remove="Assets\calls.png" />
+    <Content Remove="Assets\contacts.png" />
+    <Content Remove="Assets\Dialler.png" />
+    <Content Remove="Assets\Help.png" />
+    <Content Remove="Assets\meetings.png" />
+    <Content Remove="Assets\messages.png" />
+    <Content Remove="Assets\more.png" />
+    <Content Remove="Assets\settings.png" />
+    <Content Remove="Assets\spaces.png" />
+    <Content Remove="Assets\Ucaas.UIApp_1.0.0.0_x86_Debug.msix" />
+    <Content Remove="Assets\whatnew.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Resources\ButtonBase.xaml" />
+    <None Remove="Resources\ColorTable.xaml" />
+    <None Remove="Resources\Images\calls.png" />
+    <None Remove="Resources\Images\contacts.png" />
+    <None Remove="Resources\Images\Dialler.png" />
+    <None Remove="Resources\Images\Help.png" />
+    <None Remove="Resources\Images\meetings.png" />
+    <None Remove="Resources\Images\messages.png" />
+    <None Remove="Resources\Images\more.png" />
+    <None Remove="Resources\Images\settings.png" />
+    <None Remove="Resources\Images\spaces.png" />
+    <None Remove="Resources\Images\whatnew.png" />
+    <None Remove="Resources\TextStyles.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Assets\SplashScreen.scale-200.png" />
+    <Content Include="Assets\LockScreenLogo.scale-200.png" />
+    <Content Include="Assets\Square150x150Logo.scale-200.png" />
+    <Content Include="Assets\Square44x44Logo.scale-200.png" />
+    <Content Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png" />
+    <Content Include="Assets\StoreLogo.png" />
+    <Content Include="Assets\Wide310x150Logo.scale-200.png" />
+    <Content Include="Resources\Images\calls.png" />
+    <Content Include="Resources\Images\contacts.png" />
+    <Content Include="Resources\Images\Dialler.png" />
+    <Content Include="Resources\Images\Help.png" />
+    <Content Include="Resources\Images\meetings.png" />
+    <Content Include="Resources\Images\messages.png" />
+    <Content Include="Resources\Images\more.png" />
+    <Content Include="Resources\Images\settings.png" />
+    <Content Include="Resources\Images\spaces.png" />
+    <Content Include="Resources\Images\whatnew.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.WindowsAppSDK" Version="1.0.3" />
+    <PackageReference Include="Microsoft.Windows.SDK.BuildTools" Version="10.0.22000.194" />
+    <Manifest Include="$(ApplicationManifest)" />
+  </ItemGroup>
+
+  <!-- Defining the "Msix" ProjectCapability here allows the Single-project MSIX Packaging
+       Tools extension to be activated for this project even if the Windows App SDK Nuget
+       package has not yet been restored -->
+  <ItemGroup Condition="'$(DisableMsixProjectCapabilityAddedByProject)'!='true' and '$(EnablePreviewMsixTooling)'=='true'">
+    <ProjectCapability Include="Msix" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="WinUI3.ClassLibrary">
+      <HintPath>..\..\..\..\..\OutsideApp\WinUI3.ClassLibrary.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="Assets\calls.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Assets\contacts.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Assets\Dialler.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Assets\Help.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Assets\meetings.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Assets\messages.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Assets\more.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Assets\settings.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Assets\spaces.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Assets\Ucaas.UIApp_1.0.0.0_x86_Debug.msix">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Assets\whatnew.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <Page Update="Resources\ButtonBase.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="Resources\ColorTable.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="Resources\TextStyles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+</Project>
